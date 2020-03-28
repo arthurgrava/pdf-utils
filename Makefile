@@ -21,3 +21,9 @@ install: clean
 
 merge: clean
 	${PYTHON} scripts/merger.py --output-name ${OUTPUT} --merge-these ${INFILES}
+
+select: clean
+	${PYTHON} scripts/selector.py \
+		--output-name ${OUTPUT} \
+		--infile ${INFILE} \
+		--pages ${PAGES}
