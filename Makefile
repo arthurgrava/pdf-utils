@@ -18,3 +18,6 @@ clean:
 install: clean
 	virtualenv .env -p python3
 	${PIP} install -r requirements.txt
+
+merge: clean
+	${PYTHON} scripts/merger.py --output-name ${OUTPUT} --merge-these ${INFILES}
